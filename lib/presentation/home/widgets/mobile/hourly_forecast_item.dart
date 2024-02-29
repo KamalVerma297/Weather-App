@@ -26,7 +26,7 @@ class HourlyForecastItem extends StatelessWidget {
       margin: const EdgeInsets.all(4.0),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(12),
-        border: Border.all(color: Colors.white, width: 0.7),
+        border: Border.all(color: Colors.white, width: 1),
         color: Colors.black12,
       ),
       child: Column(

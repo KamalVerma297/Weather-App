@@ -60,7 +60,7 @@ class _WeatherScreenMobileLayoutState extends State<WeatherScreenMobileLayout> {
                         padding: const EdgeInsets.all(8.0),
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(12),
-                          border: Border.all(color: Colors.white, width: 0.7),
+                          border: Border.all(color: Colors.white, width: 1),
                         ),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -87,7 +87,7 @@ class _WeatherScreenMobileLayoutState extends State<WeatherScreenMobileLayout> {
                               color: Colors.white,
                             ),
                             Column(
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              mainAxisAlignment: MainAxisAlignment.center,
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
                                 Icon(
@@ -95,7 +95,7 @@ class _WeatherScreenMobileLayoutState extends State<WeatherScreenMobileLayout> {
                                   size: 70,
                                   color: Colors.white,
                                 ),
-                                10.verticalSpace,
+                                20.verticalSpace,
                                 CustomText(
                                   title: '${weatherResponse.list![0].weather![0].main}',
                                   fontSize: 18.sp,
