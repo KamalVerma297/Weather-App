@@ -3,9 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:weather_app/locator.dart';
 import 'package:weather_app/presentation/home/bloc/home_bloc.dart';
-import 'package:weather_app/presentation/home/weather_screen_mobile_layout.dart';
-import 'package:weather_app/presentation/home/weather_screen_web_layout.dart';
-import 'package:weather_app/presentation/responsive/responsive_layout.dart';
+import 'package:weather_app/presentation/splash/splash_screen.dart';
 import 'package:weather_app/weather_app_bloc_observer.dart';
 
 void main() {
@@ -55,10 +53,7 @@ class MyApp extends StatelessWidget {
                 ),
               ),
             ),
-            home: const ResponsiveLayout(
-              mobileScreenLayout: WeatherScreenMobileLayout(),
-              webScreenLayout: WeatherScreenWebLayout(),
-            ),
+            home: const SplashScreen(),
           );
         },
       ),
