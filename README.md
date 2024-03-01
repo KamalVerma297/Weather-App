@@ -8,8 +8,6 @@ Welcome to the Responsive Weather App – a powerful and intuitive Flutter appli
   
 - **Immutable Data Structures:** Utilize freezed to create immutable data structures, promoting cleaner code and reducing the likelihood of bugs.
 
-- **Dynamic Navigation:** Navigate through the app seamlessly with auto_route, a powerful package that simplifies routing in Flutter and ensures a smooth user experience.
-
 - **Responsive Design:** Experience a responsive design that adapts to various screen sizes, providing an optimal viewing experience on both mobile devices and tablets.
 
 ![Mobile Screenshot](assets/screenshots/mobile_screenshot.png)
