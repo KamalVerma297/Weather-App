@@ -50,7 +50,7 @@ class _SplashScreenState extends State<SplashScreen> {
               const Spacer(),
               InkWell(
                 onTap: () {
-                  Navigator.push(
+                  Navigator.pushReplacement(
                     context,
                     MaterialPageRoute(
                       builder: (context) => const ResponsiveLayout(
@@ -62,7 +62,7 @@ class _SplashScreenState extends State<SplashScreen> {
                 },
                 child: Container(
                   width: size.width * 0.4,
-                  height: size.width > 768 ? size.height * 0.1 : 55 ,
+                  height: size.width > 768 ? size.height * 0.1 : 55,
                   decoration: BoxDecoration(
                     color: const Color(0xFFDDB130),
                     borderRadius: BorderRadius.circular(100),

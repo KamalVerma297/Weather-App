@@ -22,11 +22,7 @@ class AdditionalInformationItem extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        Icon(
-          icon,
-          size: 40,
-          color: Colors.white,
-        ),
+        Icon(icon, size: 40, color: Colors.white),
         5.verticalSpace,
         CustomText(
           title: lable,

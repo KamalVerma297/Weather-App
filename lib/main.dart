@@ -42,16 +42,16 @@ class MyApp extends StatelessWidget {
           return MaterialApp(
             title: 'Weather App',
             debugShowCheckedModeBanner: false,
-            theme: ThemeData.light(useMaterial3: true).copyWith(
-              appBarTheme: AppBarTheme(
-                iconTheme: const IconThemeData(color: Colors.white),
-                backgroundColor: const Color(0xFF1c2547),
+            theme: ThemeData(
+              useMaterial3: true,
+              appBarTheme: const AppBarTheme(
+                iconTheme: IconThemeData(color: Colors.white),
+                backgroundColor: Color(0xFF1c2547),
                 centerTitle: true,
-                titleTextStyle: TextStyle(
-                  color: Colors.white,
-                  fontSize: 16.sp,
-                ),
+                titleTextStyle: TextStyle(color: Colors.white),
+                elevation: 0,
               ),
+              fontFamily: 'Lato',
             ),
             home: const SplashScreen(),
           );

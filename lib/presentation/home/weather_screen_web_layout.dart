@@ -3,8 +3,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:intl/intl.dart';
 import 'package:weather_app/presentation/home/bloc/home_bloc.dart';
-import 'package:weather_app/presentation/home/widgets/mobile/additional_info_item.dart';
-import 'package:weather_app/presentation/home/widgets/mobile/hourly_forecast_item.dart';
+import 'package:weather_app/presentation/home/widgets/additional_info_item.dart';
+import 'package:weather_app/presentation/home/widgets/hourly_forecast_item.dart';
 import 'package:weather_app/widgets/custom_scaffold.dart';
 import 'package:weather_app/widgets/custom_text.dart';
 import 'package:weather_app/widgets/progress_loader.dart';
@@ -107,14 +107,14 @@ class _WeatherScreenWebLayoutState extends State<WeatherScreenWebLayout> {
                           ],
                         ),
                       ),
-                      15.verticalSpace,
+                      5.verticalSpace,
                       CustomText(
                         title: "Hourly Forecast",
                         color: Colors.white,
                         fontSize: size.width > 1000 ? 12.sp : 14.sp,
                       ),
                       SizedBox(
-                        height: size.width > 1000 ? size.height * 0.28 : size.height * 0.23,
+                        height: size.width > 1000 ? size.height * 0.25 : size.height * 0.23,
                         child: ListView.builder(
                           scrollDirection: Axis.horizontal,
                           itemCount: 10,
@@ -125,18 +125,15 @@ class _WeatherScreenWebLayoutState extends State<WeatherScreenWebLayout> {
                               temp: getWeatherInCalcius(weatherResponse.list![index + 1].main!.temp!).toStringAsFixed(0),
                               skyType: getWeatherIcon(weatherResponse.list![index + 1].weather![0].main),
                               time: DateFormat.j().format(time),
-                              
                             );
                           },
                         ),
                       ),
-                      15.verticalSpace,
                       CustomText(
                         title: "Additional Information",
                         color: Colors.white,
-                       fontSize: size.width > 1000 ? 12.sp : 14.sp,
+                        fontSize: size.width > 1000 ? 12.sp : 14.sp,
                       ),
-                      5.verticalSpace,
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
