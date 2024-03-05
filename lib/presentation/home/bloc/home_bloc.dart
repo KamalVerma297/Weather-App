@@ -24,9 +24,9 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
 
             WeatherResponse weatherModel = WeatherResponse.fromJson(jsonData);
 
-            emit(HomeState.success(weatherModel));
+            emit(HomeState.success(weatherResponse: weatherModel));
           } catch (e) {
-            emit(HomeState.failure(e.toString()));
+            emit(HomeState.failure(errorMessage: e.toString()));
           }
         },
       );

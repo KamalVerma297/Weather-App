@@ -422,7 +422,7 @@ class __$$SuccessImplCopyWithImpl<$Res>
     Object? weatherResponse = freezed,
   }) {
     return _then(_$SuccessImpl(
-      freezed == weatherResponse
+      weatherResponse: freezed == weatherResponse
           ? _value.weatherResponse
           : weatherResponse // ignore: cast_nullable_to_non_nullable
               as WeatherResponse?,
@@ -445,7 +445,7 @@ class __$$SuccessImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$SuccessImpl implements _Success {
-  const _$SuccessImpl(this.weatherResponse);
+  const _$SuccessImpl({this.weatherResponse});
 
   @override
   final WeatherResponse? weatherResponse;
@@ -543,7 +543,7 @@ class _$SuccessImpl implements _Success {
 }
 
 abstract class _Success implements HomeState {
-  const factory _Success(final WeatherResponse? weatherResponse) =
+  const factory _Success({final WeatherResponse? weatherResponse}) =
       _$SuccessImpl;
 
   WeatherResponse? get weatherResponse;
@@ -575,7 +575,7 @@ class __$$FailureImplCopyWithImpl<$Res>
     Object? errorMessage = freezed,
   }) {
     return _then(_$FailureImpl(
-      freezed == errorMessage
+      errorMessage: freezed == errorMessage
           ? _value.errorMessage
           : errorMessage // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -586,7 +586,7 @@ class __$$FailureImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$FailureImpl implements _Failure {
-  const _$FailureImpl(this.errorMessage);
+  const _$FailureImpl({this.errorMessage});
 
   @override
   final String? errorMessage;
@@ -684,7 +684,7 @@ class _$FailureImpl implements _Failure {
 }
 
 abstract class _Failure implements HomeState {
-  const factory _Failure(final String? errorMessage) = _$FailureImpl;
+  const factory _Failure({final String? errorMessage}) = _$FailureImpl;
 
   String? get errorMessage;
   @JsonKey(ignore: true)

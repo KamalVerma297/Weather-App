@@ -15,7 +15,7 @@ class NetworkService {
         throw Exception("An Unexpected error occured");
       }
     } catch (e) {
-      return "An Unexpected error occured";
+       throw Exception("An Unexpected error occured");
     }
   }
 }
